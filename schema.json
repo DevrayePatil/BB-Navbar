@@ -1,0 +1,128 @@
+{
+  "type": "component",
+  "metadata": {},
+  "schema": {
+    "name": "bb-navbar",
+    "friendlyName": "bb-navbar",
+    "description": "An amazing Budibase component!",
+    "icon": "PaddingTop",
+    "showSettingsBar": true,
+    "settings": [
+      {
+        "type": "text",
+        "key": "title",
+        "label": "Project Name"
+      },
+      {
+        "section": true,
+        "name": "Menu",
+        "settings": [
+          {
+            "type": "text",
+            "key": "option1",
+            "label": "Option 1",
+            "defaultValue": "Option 1"
+          },
+          {
+            "type": "text",
+            "key": "option2",
+            "label": "Option 2",
+            "defaultValue": "Option 2"
+          },
+          {
+            "type": "text",
+            "key": "option3",
+            "label": "Option 3",
+            "defaultValue": "Option 3"
+          }
+        ]
+      },
+      {
+        "section": true,
+        "name": "Sub Menu",
+        "settings": [
+          {
+            "type": "icon",
+            "key": "subOption1Icon",
+            "label":"Sub Option 1 Icon"
+          },
+          {
+            "type": "text",
+            "key": "subOption1",
+            "label": "Sub Option 1",
+            "defaultValue": "Sub Option 1"
+          },
+          {
+            "type": "text",
+            "key": "subOption2",
+            "label": "Sub Option 2",
+            "defaultValue": "Sub Option 2"
+          },
+          {
+            "type": "text",
+            "key": "subOption3",
+            "label": "Sub Option 3",
+            "defaultValue": "Sub Option 3"
+          },
+          {
+            "type": "text",
+            "key": "subOption4",
+            "label": "Sub Option 4",
+            "defaultValue": "Sub Option 4"
+          }
+        ]
+      },
+      {
+        "section": true,
+        "name": "Background",
+        "settings": [
+          {
+            "type": "color",
+            "key": "bgColor",
+            "label": "Background Color",
+            "defaultValue": "#fdd332",
+            "showInBar": true
+          }
+        ]
+      },
+      {
+        "section": true,
+        "name": "Account Information",
+        "settings": [
+          {
+            "type": "text",
+            "key": "accountName",
+            "label": "Account Name",
+            "section": true
+          },
+          {
+            "type": "text",
+            "key": "expiryMassage",
+            "label": "Expiry Massage"
+          },
+          {
+            "type": "text",
+            "key": "userName",
+            "label": "User Name"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "key": "buttonText",
+        "label": "Button Name"
+      },
+      {
+        "section": true,
+        "name": "Actions",
+        "settings": [
+          {
+            "type": "event",
+            "label": "On Logout",
+            "key": "onLogout"
+          }
+        ]
+      }
+    ]
+  }
+}
