@@ -11,7 +11,10 @@
   },
   "dependencies": {
     "@crownframework/svelte-error-boundary": "^1.0.3",
-    "svelte": "^3.49.0"
+    "@material-ui/core": "^4.12.4",
+    "@mui/icons-material": "^5.10.9",
+    "svelte": "^3.49.0",
+    "svelte-icon": "^1.3.0"
   },
   "devDependencies": {
     "@budibase/backend-core": "^2.0.13",

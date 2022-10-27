@@ -42,33 +42,52 @@
         "name": "Sub Menu",
         "settings": [
           {
-            "type": "icon",
-            "key": "subOption1Icon",
-            "label":"Sub Option 1 Icon"
-          },
-          {
             "type": "text",
             "key": "subOption1",
             "label": "Sub Option 1",
-            "defaultValue": "Sub Option 1"
+            "defaultValue": "Self Learning videos"
+          },
+          {
+            "type":"text",
+            "key":"subOption1Link",
+            "label": "Sub Option 1 Link",
+            "defaultValue": "https://www.youtube.com/channel/UCUyg4WMYsuCK8EWU-jiA7Fg/videos"
           },
           {
             "type": "text",
             "key": "subOption2",
             "label": "Sub Option 2",
-            "defaultValue": "Sub Option 2"
+            "defaultValue": "Request for a demo"
+          },
+          {
+            "type":"text",
+            "key":"subOption2Link",
+            "label": "Sub Option 2 Link",
+            "defaultValue": "https://www.youtube.com/channel/UCUyg4WMYsuCK8EWU-jiA7Fg/videos"
           },
           {
             "type": "text",
             "key": "subOption3",
             "label": "Sub Option 3",
-            "defaultValue": "Sub Option 3"
+            "defaultValue": "Write to us"
+          },
+          {
+            "type":"text",
+            "key":"subOption3Link",
+            "label": "Sub Option 3 Link",
+            "defaultValue": "https://google.com"
           },
           {
             "type": "text",
             "key": "subOption4",
             "label": "Sub Option 4",
-            "defaultValue": "Sub Option 4"
+            "defaultValue": "WhatsApp us for demo"
+          },
+          {
+            "type":"text",
+            "key":"subOption4Link",
+            "label": "Sub Option 4 Link",
+            "defaultValue": "https://api.whatsapp.com/send/?phone=919823902233&text&type=phone_number&app_absent=0"
           }
         ]
       },
@@ -104,6 +123,12 @@
             "type": "text",
             "key": "userName",
             "label": "User Name"
+          },
+          {
+            "type":"text",
+            "key":"myProfileLink",
+            "label": "My Profile Link",
+            "defaultValue": "https://mybuildcost.io/app/auth/profile/details"
           }
         ]
       },
