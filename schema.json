@@ -6,7 +6,6 @@
     "friendlyName": "bb-navbar",
     "description": "An amazing Budibase component!",
     "icon": "PaddingTop",
-    "showSettingsBar": true,
     "settings": [
       {
         "type": "text",

@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  span {
+    vertical-align: middle;
+  }
+  .user-information {
+    display: flex;
+  }
+  .nav-bar {
+    display: flex;
+    height: max-content;
+    background-color: var(--bg-color, #fdd332);
+  }
+
+  .image-style {
+    height: 80px;
+    width: 80px;
+    padding: 10px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+
+  .container-style {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+  }
+
+  .container-style ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+  }
+
+  .list-style li {
+    margin-right: 10px;
+  }
+
+  .list-style li:hover {
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .arrow {
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 2px 3px;
+    margin: 3px;
+  }
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+  .sub-list-style {
+    display: none;
+    padding: 10px 0px;
+    font-weight: normal;
+  }
+  .list-icon {
+    margin-right: 10px;
+  }
+
+  .sub-list-style ul li {
+    padding: 5px 15px;
+    align-items: center;
+    height: max-content;
+    vertical-align: top;
+    margin: 5px 0px;
+  }
+
+  .sub-list-style ul li a {
+    text-decoration: none;
+  }
+  a:link,
+  a:visited {
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  a:hover,
+  a:active {
+    cursor: pointer;
+  }
+
+  .list-style ul li:hover .sub-list-style {
+    z-index: 1;
+    display: block;
+    position: absolute;
+    background-color: white;
+    list-style: none;
+    justify-items: center;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.4);
+  }
+
+  .list-style ul li:hover .sub-list-style ul {
+    display: block;
+  }
+
+  .sub-list-style ul li:hover {
+    width: 100%;
+    background-color: rgba(0, 100, 255, 0.2);
+    font-weight: normal;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header {
+    display: flex;
+    margin-top: 5px;
+    font-size: small;
+  }
+  
+  .header span {
+    margin-top: 8px;
+  }
+
+  .project-list{
+    display: none;
+  }
+
+  .right-side {
+    align-items: center;
+    display: grid;
+    text-align: end;
+    margin-right: 10px;
+  }
+  .buttonSubscription {
+    background-color: transparent;
+    border: none;
+    color: #0011ff;
+  }
+
+  hr {
+    margin: 0 20px;
+    color: #000;
+    background-color: black;
+  }
+
+  .user-menu {
+    display: none;
+    position: absolute;
+    cursor: pointer;
+  }
+
+  .user-menu div {
+    margin: 5px 0px;
+    padding: 0;
+  }
+  .user-menu div:hover {
+    margin: 5px 0px;
+    background-color: rgba(0, 100, 255, 0.2);
+  }
+
+  .user-name:hover .user-menu {
+    position: absolute;
+    display: block;
+    background-color: white;
+    cursor: pointer;
+    text-align: left;
+    white-space: nowrap;
+    border-radius: 5px;
+    right: 10px;
+    z-index: 1;
+    width: max-content;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.4);
+    font-weight: normal;
+  }
+
+  .user-name:hover .user-menu div {
+    padding: 5px 15px;
+  }

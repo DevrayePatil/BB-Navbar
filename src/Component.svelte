@@ -9,8 +9,15 @@
   import writeToUs from "./resources/write-to-us.svg";
   import whatsApp from "./resources/whatsapp.svg";
 
+  import projectMenuIcon from "./resources/kebab-icon.svg";
+
   import myProfile from "./resources/my-profile.svg";
   import logout from "./resources/logout.svg";
+
+  import cloneIcon from "./resources/clone.svg";
+  import exportIcon from "./resources/export.svg";
+  import printIcon from "./resources/print.svg";
+  import dropdownIcon from "./resources/dropdown-icon.svg";
 
   export let bgColor, title;
   export let option1, option2, option3;
@@ -32,7 +39,7 @@
       <Icon data={MBCLogo} size="60px" />
     </span>
 
-    <div class="containt-style">
+    <div class="container-style">
       <div>
         <div class="list-style">
           <ul>
@@ -45,35 +52,35 @@
                 <ul>
                   <li>
                     <a href={subOption1Link} rel="noreferrer" target="_blank">
-                    <span class="list-icon">
-                      <Icon data={videoCamera} />
-                    </span>
-                    <span class="list-label">{subOption1}</span>
-                  </a>
+                      <span class="list-icon">
+                        <Icon data={videoCamera} />
+                      </span>
+                      <span class="list-label">{subOption1}</span>
+                    </a>
                   </li>
                   <li>
                     <a href={subOption2Link} rel="noreferrer" target="_blank">
-                    <span class="list-icon">
-                      <Icon data={requestForDemo} class="list-icon" />
-                    </span>
-                    <span class="list-label">{subOption2}</span>
+                      <span class="list-icon">
+                        <Icon data={requestForDemo} />
+                      </span>
+                      <span class="list-label">{subOption2}</span>
                     </a>
                   </li>
 
                   <li>
                     <a href={subOption3Link} rel="noreferrer" target="_blank">
-                    <span class="list-icon">
-                      <Icon data={writeToUs} />
-                    </span>
-                    <span class="list-label">{subOption3}</span>
+                      <span class="list-icon">
+                        <Icon data={writeToUs} />
+                      </span>
+                      <span class="list-label">{subOption3}</span>
                     </a>
                   </li>
                   <li>
                     <a href={subOption4Link} rel="noreferrer" target="_blank">
-                    <span class="list-icon">
-                      <Icon data={whatsApp} />
-                    </span>
-                    <span class="list-label">{subOption4}</span>
+                      <span class="list-icon">
+                        <Icon data={whatsApp} />
+                      </span>
+                      <span class="list-label">{subOption4}</span>
                     </a>
                   </li>
                 </ul>
@@ -83,13 +90,58 @@
         </div>
         <div class="header">
           <h1>{title}</h1>
+          <span class="project-list-icon"
+            ><Icon data={projectMenuIcon} />
+            <div class="project-list">
+              <ul>
+                <li>
+                  <span class="list-icon">
+                    <Icon data={cloneIcon} />
+                  </span>
+                  Clone
+                </li>
+                <li class="expand-list">
+                  <span class="list-icon">
+                    <Icon data={exportIcon} />
+                  </span>
+                  Export
+                  <i class="expand-list-icon right">
+                    <Icon data={dropdownIcon} size="10px"/>
+                  </i>
+                  <div class="expanded-list">
+                    <ul>
+                      <li>Export in Exal</li>
+                      <li>Export in PDF</li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="expand-list">
+                  <span class="list-icon">
+                    <Icon data={printIcon} />
+                  </span>
+                  Print
+                  <i class="expand-list-icon right">
+                    <Icon data={dropdownIcon} size="10px"/>
+                  </i>
+                  <div class="expanded-list">
+                    <ul>
+                      <li>Budgeted Cost</li>
+                      <li>Budgeted & Estimated Cost</li>
+                      <li>Estimated Cost (Summery)</li>
+                      <li>Estimated Cost (Detailed)</li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </span>
         </div>
       </div>
 
       <div class="right-side">
         <div>
           <div>
-            <div class="info">
+            <div class="user-information">
               <div>{accountName}</div>
               &nbsp;|&nbsp;
               <div class="user-name">
@@ -97,11 +149,10 @@
                 <div class="user-menu">
                   <div class="list-item">
                     <a href={myProfileLink} rel="noreferrer" target="_blank">
-                    <span class="list-icon">
-
-                      <Icon data={myProfile} />
-                    </span>
-                    <span class="list-label">My Profile</span>
+                      <span class="list-icon">
+                        <Icon data={myProfile} />
+                      </span>
+                      <span class="list-label">My Profile</span>
                     </a>
                   </div>
                   <hr />
@@ -127,7 +178,14 @@
 </div>
 
 <style>
-  .info {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  span {
+    vertical-align: middle;
+  }
+  .user-information {
     display: flex;
   }
   .nav-bar {
@@ -144,20 +202,19 @@
     object-fit: cover;
   }
 
-  .containt-style {
+  .container-style {
     width: 100%;
     display: flex;
     justify-content: space-between;
-  }
-  span {
-    vertical-align: middle;
+    padding: 5px;
   }
 
-  .containt-style ul {
+  .container-style ul {
     list-style: none;
     display: flex;
     padding: 0;
   }
+
   .list-style li {
     margin-right: 10px;
   }
@@ -177,6 +234,10 @@
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
   }
+  .right {
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+  }
   .sub-list-style {
     display: none;
     padding: 10px 0px;
@@ -194,21 +255,24 @@
     margin: 5px 0px;
   }
 
-  .sub-list-style ul li a{
+  .sub-list-style ul li a {
     text-decoration: none;
   }
-  a:link, a:visited {
-  color: black;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-}
+  a:link,
+  a:visited {
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
 
-a:hover, a:active {
-  cursor: pointer;
-}
+  a:hover,
+  a:active {
+    cursor: pointer;
+  }
 
   .list-style ul li:hover .sub-list-style {
+    z-index: 1;
     display: block;
     position: absolute;
     background-color: white;
@@ -231,14 +295,76 @@ a:hover, a:active {
   }
 
   .header {
-    font-weight: lighter;
-    font-size: smaller;
-  }
-  .header h1 {
-    margin: 0;
-    padding: 0;
+    display: flex;
+    margin-top: 5px;
+    font-size: small;
   }
 
+  .header span {
+    margin-top: 8px;
+  }
+
+  .project-list {
+    display: none;
+  }
+
+  .project-list ul li{
+    width: 100%;
+    border-color: tomato;
+
+  }
+  .project-list:hover {
+    background-color: #678;
+  }
+  .project-list ul li:hover{
+    background-color: rgba(0, 100, 255, 0.2);
+  }
+  .project-list-icon:hover .project-list {
+    z-index: 1;
+    display: block;
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.4);
+  }
+
+  .project-list-icon:hover .project-list ul {
+    display: block;
+  }
+  .project-list-icon:hover .project-list ul li{
+    padding: 5px 10px;
+    margin: 5px 0;
+    white-space: nowrap;
+  }
+  .expand-list-icon{
+    float: right;
+    margin-top: 5px;
+    margin-left: 20px;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+  }
+  .expanded-list{
+    display: none;
+  }
+  .expand-list:hover .expanded-list{
+    display: block;
+    position: absolute;
+    margin-left: 105px;
+    margin-top: -25px;
+    border-radius: 5px;
+
+    background-color: white;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.4);
+
+  }
+
+   .expand-list:hover .expanded-list ul li{
+   padding: 5px 20px;
+    margin: 5px 0;
+  }
+
+  
+  
   .right-side {
     align-items: center;
     display: grid;
@@ -281,6 +407,7 @@ a:hover, a:active {
     white-space: nowrap;
     border-radius: 5px;
     right: 10px;
+    z-index: 1;
     width: max-content;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.4);
     font-weight: normal;
