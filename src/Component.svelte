@@ -26,6 +26,7 @@
   export let buttonText;
   export let onLogout;
 
+  export let option1Link, option2Link;
   export let subOption1Link, subOption2Link, subOption3Link, subOption4Link;
   export let myProfileLink;
 
@@ -43,8 +44,8 @@
       <div>
         <div class="list-style">
           <ul>
-            <li>{option1}</li>
-            <li>{option2}</li>
+            <li><a href={option1Link} rel="noreferrer">{option1}</a></li>
+            <li><a href={option2Link} rel="noreferrer">{option2}</a></li>
             <li>
               {option3}
               <i class="arrow down" />
@@ -120,7 +121,7 @@
                     <Icon data={printIcon} />
                   </span>
                   Print
-                  <i class="expand-list-icon right">
+                  <i class="expand-list-icon">
                     <Icon data={dropdownIcon} size="10px"/>
                   </i>
                   <div class="expanded-list">
@@ -143,7 +144,7 @@
           <div>
             <div class="user-information">
               <div>{accountName}</div>
-              &nbsp;|&nbsp;
+              &nbsp;| &nbsp;
               <div class="user-name">
                 {userName}
                 <div class="user-menu">
@@ -209,14 +210,15 @@
     padding: 5px;
   }
 
-  .container-style ul {
+  .list-style ul {
     list-style: none;
     display: flex;
     padding: 0;
   }
 
-  .list-style li {
+  .list-style ul li {
     margin-right: 10px;
+    color: #000;
   }
 
   .list-style li:hover {
@@ -340,8 +342,8 @@
     float: right;
     margin-top: 5px;
     margin-left: 20px;
-    transform: rotate(-90deg);
-    -webkit-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+      -webkit-transform: rotate(-90deg);
   }
   .expanded-list{
     display: none;

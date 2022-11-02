@@ -23,10 +23,22 @@
             "defaultValue": "Option 1"
           },
           {
+            "type":"text",
+            "key":"option1Link",
+            "label": "Option 1 Link",
+            "defaultValue": "https://mybuildcost.io/app/projects?type=active"
+          },
+          {
             "type": "text",
             "key": "option2",
             "label": "Option 2",
             "defaultValue": "Option 2"
+          },
+          {
+            "type":"text",
+            "key":"option2Link",
+            "label": "Option 2 Link",
+            "defaultValue": "https://mybuildcost.io/app/projects?type=active"
           },
           {
             "type": "text",
